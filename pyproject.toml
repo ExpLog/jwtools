@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "jwtools"
+version = "0.1.0"
+description = ""
+authors = ["Leonardo Fontoura <lobo.fontoura@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typer = "^0.3.2"
+PyJWT = "^2.0.0"
+rich = "^9.7.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.1"
+pytest-cov = "^2.10.1"
+
+[tool.poetry.scripts]
+jwtools = "jwtools.cli:cli"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
