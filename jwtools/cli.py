@@ -15,7 +15,9 @@ STDOUT_TTY = sys.stdout.isatty()
 STDIN_TTY = sys.stdin.isatty()
 
 
-@cli.command()
+# TODO: add a way to verify the jwt (separate command, just flags, or both?)
+# TODO: add a way to fetch a jwt (a separate command)
+@cli.command('decode')
 def print_jwt(encoded_jwt: str,
               use_table: bool = Option(False, '--table', '-t'),
               verbose: int = Option(0, '--verbose', '-v', count=True)):
